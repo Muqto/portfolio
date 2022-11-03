@@ -58,7 +58,9 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+          <a href={work.projectLink} target="_blank" rel="noreferrer" style={{textDecoration : "none"}}>
+          <div className="app__work-item app__flex" key={index} >
+          
             <div
               className="app__work-img app__flex"
             >
@@ -102,6 +104,7 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </a>
         ))}
       </motion.div>
     </>
